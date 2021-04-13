@@ -9,7 +9,7 @@ Project Structure Intellij:
 `javafx-sdk-16`
 
 
-Check House-Rental-Management\images folder to see the GUI
+Check House-Rental-Management\`images` folder to see how GUI looks
 
 
 
