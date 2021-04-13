@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="employeeBase_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.employee.GUI_Employee">
+   <children>
+      <AnchorPane fx:id="employee_menu" prefHeight="62.0" prefWidth="1000.0" style="-fx-background-color: #0D5C71;">
+         <children>
+            <Text fill="WHITE" layoutX="380.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee menu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="employee_signOut" layoutX="895.0" layoutY="18.0" mnemonicParsing="false" onAction="#employeeSignOut" prefHeight="22.0" prefWidth="90.0" text="Sign out" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="combos_pane" layoutX="10.0" layoutY="62.0" prefHeight="538.0" prefWidth="900.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <ComboBox fx:id="country_combo" layoutX="113.0" layoutY="-1.0" prefHeight="30.0" prefWidth="120.0" promptText="Country/State" />
+            <ComboBox fx:id="surface_combo" layoutX="17.0" layoutY="39.0" prefHeight="30.0" prefWidth="120.0" promptText="Usable surface" />
+            <ComboBox fx:id="garden_combo" layoutX="149.0" layoutY="40.0" prefHeight="30.0" prefWidth="126.0" promptText="Garden surface" />
+            <ComboBox fx:id="bedroom_combo" layoutX="499.0" layoutY="-1.0" prefHeight="30.0" prefWidth="106.0" promptText="Bedrooms" />
+            <ComboBox fx:id="houseName_combo" layoutX="373.0" layoutY="39.0" prefHeight="30.0" prefWidth="159.0" promptText="Rental house name" />
+            <ComboBox fx:id="floors_combo" layoutX="287.0" layoutY="39.0" prefHeight="30.0" prefWidth="78.0" promptText="Floors" />
+            <ComboBox fx:id="price_combo" layoutX="241.0" layoutY="-1.0" prefHeight="30.0" prefWidth="120.0" promptText="Price / month" />
+            <ComboBox fx:id="city_combo" layoutX="14.0" layoutY="-1.0" prefHeight="30.0" prefWidth="90.0" promptText="City" />
+            <ComboBox fx:id="types_combo" layoutX="372.0" layoutY="-1.0" prefHeight="30.0" prefWidth="120.0" promptText="Housing type" />
+            <Button fx:id="view_statistics" layoutX="897.0" layoutY="1.0" mnemonicParsing="false" onAction="#viewStatistics" prefHeight="26.0" prefWidth="102.0" text="View Statistics" />
+            <Button fx:id="view_rentals" layoutX="790.0" layoutY="1.0" mnemonicParsing="false" onAction="#viewRentals" prefHeight="22.0" prefWidth="94.0" text="View Rentals" />
+            <Button fx:id="view_clients" layoutX="790.0" layoutY="42.0" mnemonicParsing="false" onAction="#viewClients" prefHeight="22.0" prefWidth="94.0" text="View Clients" />
+            <Button fx:id="save_reports" layoutX="897.0" layoutY="41.0" mnemonicParsing="false" onAction="#saveReports" prefHeight="19.0" prefWidth="102.0" text="Save Reports" />
+            <Button fx:id="search_btn" layoutX="686.0" layoutY="1.0" mnemonicParsing="false" onAction="#searchBtn" prefHeight="26.0" prefWidth="90.0" text="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="charts_pane" layoutX="29.0" layoutY="194.0" prefHeight="406.0" prefWidth="900.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0">
+         <children>
+            <PieChart fx:id="pieChart" layoutX="565.0" layoutY="-15.0" prefHeight="368.0" prefWidth="435.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="565.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <BarChart fx:id="barChart" layoutX="14.0" layoutY="185.0" prefHeight="368.0" prefWidth="435.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="565.0" AnchorPane.topAnchor="0.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rentals_pane" layoutX="10.0" layoutY="133.0" prefHeight="467.0" prefWidth="1000.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+         <children>
+            <AnchorPane fx:id="textfield_menu" layoutX="874.0" prefHeight="467.0" prefWidth="126.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="874.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="tf_city" layoutX="12.0" layoutY="62.0" prefHeight="26.0" prefWidth="102.0" promptText="City" />
+                  <TextField fx:id="tf_country" layoutX="14.0" layoutY="100.0" prefHeight="26.0" prefWidth="102.0" promptText="Country" />
+                  <TextField fx:id="tf_bedrooms" layoutX="14.0" layoutY="207.0" prefHeight="26.0" prefWidth="102.0" promptText="Bedrooms" />
+                  <TextField fx:id="tf_houseName" layoutX="14.0" layoutY="339.0" prefHeight="26.0" prefWidth="102.0" promptText="House name" />
+                  <TextField fx:id="tf_price" layoutX="14.0" layoutY="137.0" prefHeight="26.0" prefWidth="102.0" promptText="Price" />
+                  <TextField fx:id="tf_garden" layoutX="14.0" layoutY="272.0" prefHeight="26.0" prefWidth="102.0" promptText="Garden surface" />
+                  <TextField fx:id="tf_surface" layoutX="14.0" layoutY="240.0" prefHeight="26.0" prefWidth="102.0" promptText="Usable surface" />
+                  <TextField fx:id="tf_housingType" layoutX="14.0" layoutY="172.0" prefHeight="26.0" prefWidth="102.0" promptText="Housing type" />
+                  <TextField fx:id="tf_floors" layoutX="14.0" layoutY="306.0" prefHeight="26.0" prefWidth="102.0" promptText="Floors" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="rentals_table" layoutX="17.0" layoutY="64.0" prefHeight="306.0" prefWidth="855.0">
+               <columns>
+                  <TableColumn fx:id="city_column" prefWidth="115.20000648498535" text="City" />
+                  <TableColumn fx:id="country_column" prefWidth="99.19998168945312" text="Country" />
+                  <TableColumn fx:id="price_column" minWidth="0.0" prefWidth="86.4000244140625" text="Price / month" />
+                  <TableColumn fx:id="housing_column" prefWidth="96.0" text="Housing type" />
+                  <TableColumn fx:id="bedrooms_column" text="Bedrooms" />
+                  <TableColumn fx:id="surface_column" prefWidth="92.00003051757812" text="Usable surface" />
+                  <TableColumn fx:id="garden_column" prefWidth="102.4000244140625" text="Garden surface" />
+                  <TableColumn fx:id="floors_column" prefWidth="52.00006103515625" text="Floors" />
+                  <TableColumn fx:id="rentalHouseName_column" prefWidth="127.20000000000005" text=" House name" />
+               </columns>
+            </TableView>
+            <AnchorPane fx:id="employee_menu2" layoutY="371.0" prefHeight="96.0" prefWidth="1000.0" style="-fx-background-color: #0D5C71;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="371.0">
+               <children>
+                  <Text fill="WHITE" layoutX="468.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rentals">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="deleteRental_btn" layoutX="619.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleDeleteRentals" prefHeight="26.0" prefWidth="78.0" text="Delete" />
+                  <Button fx:id="updateRental_btn" layoutX="519.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleUpdateRentals" prefHeight="26.0" prefWidth="78.0" text="Update" />
+                  <Button fx:id="readRental_btn" layoutX="420.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleReadRentals" prefHeight="26.0" prefWidth="78.0" text="Read" />
+                  <Button fx:id="createRental_btn" layoutX="315.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleCreateRental" prefHeight="26.0" prefWidth="78.0" text="Create" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="clients_pane" layoutY="133.0" prefHeight="467.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+         <children>
+            <TextField fx:id="tf_clientLastName" layoutX="881.0" layoutY="102.0" prefHeight="26.0" prefWidth="106.0" promptText="Last Name" />
+            <TextField fx:id="tf_clientFirstName" layoutX="881.0" layoutY="65.0" prefHeight="26.0" prefWidth="106.0" promptText="First Name" />
+            <TextField fx:id="tf_clientEmail" layoutX="881.0" layoutY="137.0" prefHeight="26.0" prefWidth="106.0" promptText="Email" />
+            <TextField fx:id="tf_clientStatus" layoutX="881.0" layoutY="170.0" prefHeight="26.0" prefWidth="106.0" promptText="Status" />
+            <TextField fx:id="tf_clientHouseRented" layoutX="881.0" layoutY="205.0" prefHeight="26.0" prefWidth="106.0" promptText="House name" />
+            <TextField fx:id="tf_clientCity" layoutX="881.0" layoutY="240.0" prefHeight="26.0" prefWidth="106.0" promptText="City" />
+            <TextField fx:id="tf_clientHousingType" layoutX="881.0" layoutY="273.0" prefHeight="26.0" prefWidth="106.0" promptText="Housing type" />
+            <TextField fx:id="tf_clientPrice" layoutX="881.0" layoutY="306.0" prefHeight="26.0" prefWidth="106.0" promptText="Price" />
+            <TableView fx:id="clients_table" layoutX="16.0" layoutY="65.0" prefHeight="306.0" prefWidth="855.0" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="65.0">
+               <columns>
+                  <TableColumn fx:id="client_firstName" prefWidth="70.39999008178711" text="first name" />
+                  <TableColumn fx:id="client_lastName" prefWidth="96.0" text="last name" />
+                  <TableColumn fx:id="client_email" prefWidth="260.8000030517578" text="email" />
+                  <TableColumn fx:id="client_status" prefWidth="71.20001220703125" text="status" />
+                  <TableColumn fx:id="clientHouseName" prefWidth="109.5999755859375" text="House name" />
+                  <TableColumn fx:id="client_city" prefWidth="87.199951171875" text="City" />
+                  <TableColumn fx:id="client_housingType" prefWidth="102.4000244140625" text="Housing type" />
+                  <TableColumn fx:id="client_housePrice" prefWidth="52.0001220703125" text="Price" />
+               </columns>
+            </TableView>
+            <AnchorPane fx:id="employee_menu3" layoutY="371.0" prefHeight="96.0" prefWidth="1000.0" style="-fx-background-color: #0D5C71;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="371.0">
+               <children>
+                  <Text fill="WHITE" layoutX="468.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clients">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="createClient_btn" layoutX="325.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleCreateClient" prefHeight="26.0" prefWidth="78.0" text="Create" />
+                  <Button fx:id="readClient_btn" layoutX="429.0" layoutY="34.0" mnemonicParsing="false" onAction="#readClient" prefHeight="26.0" prefWidth="78.0" text="Read" />
+                  <Button fx:id="updateClient_btn" layoutX="532.0" layoutY="33.0" mnemonicParsing="false" onAction="#updateClient" prefHeight="26.0" prefWidth="78.0" text="Update" />
+                  <Button fx:id="deleteClient_btn" layoutX="632.0" layoutY="33.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="26.0" prefWidth="78.0" text="Delete" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
