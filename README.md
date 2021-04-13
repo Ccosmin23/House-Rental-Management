@@ -11,6 +11,12 @@ Project Structure Intellij:
 
 Check House-Rental-Management\`images` folder to see how GUI looks
 
+Login as an admin:
+  username `admin`
+  password `admin`
 
+Login as an employee:
+  username `user`
+  password `pass`
 
 
