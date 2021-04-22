@@ -9,7 +9,7 @@ Project Structure Intellij:
 `javafx-sdk-16`
 
 
-Check House-Rental-Management\`images` folder to see how GUI looks
+Check House-Rental-Management `images` folder to see how GUI looks
 
 Login as an admin:
   username `admin`
@@ -19,4 +19,4 @@ Login as an employee:
   username `user`
   password `pass`
 
-
+![alt text](https://github.com/[Ccosmin23]/[House-Rental-Management]/blob/[master]/img1.png?raw=true)
