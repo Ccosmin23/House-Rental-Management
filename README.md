@@ -19,4 +19,4 @@ Login as an employee:
   username `user`
   password `pass`
 
-![plot](./E:\Facultate\An3\Sem2\PS\House-Rental-Management?raw=true)
+![img1](https://user-images.githubusercontent.com/56337445/115684384-fa361100-a35f-11eb-952a-aaf633b3d0ce.png)
