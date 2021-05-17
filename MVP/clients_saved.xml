@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="13.0.6" class="java.beans.XMLDecoder">
+ <object class="model.Clients" id="Clients0">
+  <void property="clientList">
+   <void method="add">
+    <object class="model.Client" id="Client0">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Client0"/>
+       <string>pafnuti</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Client0"/>
+       <string>cebisev</string>
+      </void>
+     </void>
+     <void property="city">
+      <string>Alba Iulia</string>
+     </void>
+     <void property="email">
+      <string>russian.math@gmail.com</string>
+     </void>
+     <void property="houseName">
+      <string>Apartament1</string>
+     </void>
+     <void property="housingType">
+      <string>Apartament</string>
+     </void>
+     <void property="price">
+      <int>500</int>
+     </void>
+     <void property="status">
+      <string>rented</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Client" id="Client1">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Client1"/>
+       <string>louis</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Client1"/>
+       <string>cauchy</string>
+      </void>
+     </void>
+     <void property="city">
+      <string>Predeal</string>
+     </void>
+     <void property="email">
+      <string>makeStudentsLifeHeavier@gmail.com</string>
+     </void>
+     <void property="houseName">
+      <string>House1</string>
+     </void>
+     <void property="housingType">
+      <string>House</string>
+     </void>
+     <void property="price">
+      <int>1500</int>
+     </void>
+     <void property="status">
+      <string>leave</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Client" id="Client2">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Client2"/>
+       <string>mihai</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Client2"/>
+       <string>eminescu</string>
+      </void>
+     </void>
+     <void property="city">
+      <string>Murgeni</string>
+     </void>
+     <void property="email">
+      <string>mihaita.eminescu@gmail.com</string>
+     </void>
+     <void property="houseName">
+      <string>Chalet1</string>
+     </void>
+     <void property="housingType">
+      <string>Chalet</string>
+     </void>
+     <void property="price">
+      <int>2500</int>
+     </void>
+     <void property="status">
+      <string>on hold</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Client" id="Client3">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Client3"/>
+       <string>sandor</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Client3"/>
+       <string>petofi</string>
+      </void>
+     </void>
+     <void property="city">
+      <string>Ploiesti</string>
+     </void>
+     <void property="email">
+      <string>hero.oftransylvania@gmail.com</string>
+     </void>
+     <void property="houseName">
+      <string>Apartament2</string>
+     </void>
+     <void property="housingType">
+      <string>Apartament</string>
+     </void>
+     <void property="price">
+      <int>3500</int>
+     </void>
+     <void property="status">
+      <string>rented</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

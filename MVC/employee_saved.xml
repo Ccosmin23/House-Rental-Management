@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="13.0.6" class="java.beans.XMLDecoder">
+ <object class="model.Employees" id="Employees0">
+  <void property="employeeList">
+   <void method="add">
+    <object class="model.Employee" id="Employee0">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Employee0"/>
+       <string>fName_employee1</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Employee0"/>
+       <string>lName1_employee1</string>
+      </void>
+     </void>
+     <void property="password">
+      <string>pass</string>
+     </void>
+     <void property="role">
+      <string>employee</string>
+     </void>
+     <void property="username">
+      <string>user</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Employee" id="Employee1">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Employee1"/>
+       <string>fName_employee2</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Employee1"/>
+       <string>lName2_employee2</string>
+      </void>
+     </void>
+     <void property="password">
+      <string>emp2</string>
+     </void>
+     <void property="role">
+      <string>employee</string>
+     </void>
+     <void property="username">
+      <string>emp2</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Employee" id="Employee2">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Employee2"/>
+       <string>fName_employee3</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Employee2"/>
+       <string>lName3_employee3</string>
+      </void>
+     </void>
+     <void property="password">
+      <string>emp3</string>
+     </void>
+     <void property="role">
+      <string>employee</string>
+     </void>
+     <void property="username">
+      <string>emp3</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Employee" id="Employee3">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Employee3"/>
+       <string>fName_employee4</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Employee3"/>
+       <string>lName4_employee4</string>
+      </void>
+     </void>
+     <void property="password">
+      <string>admin</string>
+     </void>
+     <void property="role">
+      <string>admin</string>
+     </void>
+     <void property="username">
+      <string>admin</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Employee" id="Employee4">
+     <void class="model.Person" method="getField">
+      <string>first_name</string>
+      <void method="set">
+       <object idref="Employee4"/>
+       <string>fName_employee4</string>
+      </void>
+     </void>
+     <void class="model.Person" method="getField">
+      <string>last_name</string>
+      <void method="set">
+       <object idref="Employee4"/>
+       <string>lName4_employee4</string>
+      </void>
+     </void>
+     <void property="password">
+      <string>admin</string>
+     </void>
+     <void property="role">
+      <string>employee</string>
+     </void>
+     <void property="username">
+      <string>cosmin</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

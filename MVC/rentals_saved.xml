@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="13.0.7" class="java.beans.XMLDecoder">
+ <object class="model.RentalHouses" id="RentalHouses0">
+  <void property="rentalHouseList">
+   <void method="add">
+    <object class="model.RentalHouse">
+     <void property="bedrooms">
+      <string>4</string>
+     </void>
+     <void property="city">
+      <string>Alba Iulia</string>
+     </void>
+     <void property="country">
+      <string>Alba</string>
+     </void>
+     <void property="floors">
+      <string>1</string>
+     </void>
+     <void property="garden_surface">
+      <string>500</string>
+     </void>
+     <void property="house_name">
+      <string>Apartament1</string>
+     </void>
+     <void property="housing_type">
+      <string>Apartament</string>
+     </void>
+     <void property="price">
+      <string>500</string>
+     </void>
+     <void property="usable_surface">
+      <string>500</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.RentalHouse">
+     <void property="bedrooms">
+      <string>5</string>
+     </void>
+     <void property="city">
+      <string>Predeal</string>
+     </void>
+     <void property="country">
+      <string>Brasov</string>
+     </void>
+     <void property="floors">
+      <string>3</string>
+     </void>
+     <void property="garden_surface">
+      <string>500</string>
+     </void>
+     <void property="house_name">
+      <string>House1</string>
+     </void>
+     <void property="housing_type">
+      <string>House</string>
+     </void>
+     <void property="price">
+      <string>1500</string>
+     </void>
+     <void property="usable_surface">
+      <string>800</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.RentalHouse">
+     <void property="bedrooms">
+      <string>3</string>
+     </void>
+     <void property="city">
+      <string>Murgeni</string>
+     </void>
+     <void property="country">
+      <string>Vaslui</string>
+     </void>
+     <void property="floors">
+      <string>2</string>
+     </void>
+     <void property="garden_surface">
+      <string>2000</string>
+     </void>
+     <void property="house_name">
+      <string>Chalet1</string>
+     </void>
+     <void property="housing_type">
+      <string>Chalet</string>
+     </void>
+     <void property="price">
+      <string>2500</string>
+     </void>
+     <void property="usable_surface">
+      <string>400</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.RentalHouse">
+     <void property="bedrooms">
+      <string>3</string>
+     </void>
+     <void property="city">
+      <string>Ploiesti</string>
+     </void>
+     <void property="country">
+      <string>Prahova</string>
+     </void>
+     <void property="floors">
+      <string>1</string>
+     </void>
+     <void property="garden_surface">
+      <string>1500</string>
+     </void>
+     <void property="house_name">
+      <string>Apartament2</string>
+     </void>
+     <void property="housing_type">
+      <string>Apartament</string>
+     </void>
+     <void property="price">
+      <string>3500</string>
+     </void>
+     <void property="usable_surface">
+      <string>150</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
