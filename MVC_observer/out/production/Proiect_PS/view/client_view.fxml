@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="employeeBase_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CClient">
+   <children>
+      <AnchorPane fx:id="combos_pane" layoutX="10.0" layoutY="62.0" prefHeight="538.0" prefWidth="900.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <ComboBox fx:id="country_combo" layoutX="113.0" layoutY="-1.0" prefHeight="30.0" prefWidth="120.0" promptText="County" />
+            <ComboBox fx:id="surface_combo" layoutX="17.0" layoutY="39.0" prefHeight="30.0" prefWidth="159.0" promptText="Usable surface" />
+            <ComboBox fx:id="garden_combo" layoutX="186.0" layoutY="39.0" prefHeight="30.0" prefWidth="166.0" promptText="Garden surface" />
+            <ComboBox fx:id="bedroom_combo" layoutX="514.0" layoutY="-1.0" prefHeight="30.0" prefWidth="106.0" promptText="Bedrooms" />
+            <ComboBox fx:id="houseName_combo" layoutX="451.0" layoutY="39.0" prefHeight="30.0" prefWidth="166.0" promptText="House name" />
+            <ComboBox fx:id="floors_combo" layoutX="361.0" layoutY="39.0" prefHeight="30.0" prefWidth="78.0" promptText="Floors" />
+            <ComboBox fx:id="price_combo" layoutX="241.0" layoutY="-1.0" prefHeight="30.0" prefWidth="120.0" promptText="Price / month" />
+            <ComboBox fx:id="city_combo" layoutX="14.0" layoutY="-1.0" prefHeight="30.0" prefWidth="90.0" promptText="City" />
+            <ComboBox fx:id="types_combo" layoutX="372.0" layoutY="-1.0" prefHeight="30.0" prefWidth="134.0" promptText="Housing type" />
+            <Button fx:id="view_statistics" layoutX="875.0" layoutY="1.0" mnemonicParsing="false" onAction="#viewStatistics" prefHeight="26.0" prefWidth="126.0" text="View Statistics" />
+            <Button fx:id="search_btn" layoutX="642.0" layoutY="1.0" mnemonicParsing="false" onAction="#searchBtn" prefHeight="26.0" prefWidth="90.0" text="Search" />
+            <Button fx:id="view_rentals" layoutX="739.0" layoutY="1.0" mnemonicParsing="false" onAction="#viewRentals" prefHeight="26.0" prefWidth="134.0" text="View Rentals" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuClient_pane" layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="1000.0" style="-fx-background-color: #0D5C71;" AnchorPane.bottomAnchor="538.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="signIn_btn" layoutX="895.0" layoutY="12.0" mnemonicParsing="false" onAction="#clientSignIn" prefHeight="26.0" prefWidth="90.0" text="Sign in" />
+            <Text fill="WHITE" layoutX="449.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client menu">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="notification_textField" layoutX="14.0" layoutY="12.0" prefHeight="26.0" prefWidth="258.0" promptText="Notifications" style="-fx-background-color: #0D5C71;" />
+            <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="646.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ro.png" />
+               </image>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="685.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../en.png" />
+               </image>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="721.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../de.png" />
+               </image>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="757.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../es.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ro_button" blendMode="DARKEN" layoutX="646.0" layoutY="7.0" mnemonicParsing="false" onAction="#romanianLanguage" prefHeight="26.0" prefWidth="26.0" />
+            <Button fx:id="es_button" blendMode="DARKEN" layoutX="757.0" layoutY="9.0" mnemonicParsing="false" onAction="#spanishLanguage" prefHeight="26.0" prefWidth="26.0" />
+            <Button fx:id="de_button" blendMode="DARKEN" layoutX="721.0" layoutY="9.0" mnemonicParsing="false" onAction="#germanLanguage" prefHeight="26.0" prefWidth="26.0" />
+            <Button fx:id="en_button" blendMode="DARKEN" layoutX="685.0" layoutY="9.0" mnemonicParsing="false" onAction="#englishLanguage" prefHeight="26.0" prefWidth="26.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="charts_pane" layoutX="29.0" layoutY="194.0" prefHeight="406.0" prefWidth="900.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0">
+         <children>
+            <PieChart fx:id="pieChart" layoutX="565.0" layoutY="-15.0" prefHeight="368.0" prefWidth="435.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="565.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <PieChart fx:id="pieChart2" prefHeight="368.0" prefWidth="435.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="565.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rentals_pane" layoutX="10.0" layoutY="133.0" prefHeight="467.0" prefWidth="1000.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+         <children>
+            <AnchorPane fx:id="textfield_menu" layoutX="874.0" prefHeight="467.0" prefWidth="126.0" style="-fx-background-color: #138EAB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="874.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="tf_city" layoutX="12.0" layoutY="62.0" prefHeight="26.0" prefWidth="102.0" promptText="City" />
+                  <TextField fx:id="tf_country" layoutX="14.0" layoutY="100.0" prefHeight="26.0" prefWidth="102.0" promptText="Country" />
+                  <TextField fx:id="tf_bedrooms" layoutX="14.0" layoutY="207.0" prefHeight="26.0" prefWidth="102.0" promptText="Bedrooms" />
+                  <TextField fx:id="tf_houseName" layoutX="14.0" layoutY="339.0" prefHeight="26.0" prefWidth="102.0" promptText="House name" />
+                  <TextField fx:id="tf_price" layoutX="14.0" layoutY="137.0" prefHeight="26.0" prefWidth="102.0" promptText="Price" />
+                  <TextField fx:id="tf_garden" layoutX="14.0" layoutY="272.0" prefHeight="26.0" prefWidth="102.0" promptText="Garden surface" />
+                  <TextField fx:id="tf_surface" layoutX="14.0" layoutY="240.0" prefHeight="26.0" prefWidth="102.0" promptText="Usable surface" />
+                  <TextField fx:id="tf_housingType" layoutX="14.0" layoutY="172.0" prefHeight="26.0" prefWidth="102.0" promptText="Housing type" />
+                  <TextField fx:id="tf_floors" layoutX="14.0" layoutY="306.0" prefHeight="26.0" prefWidth="102.0" promptText="Floors" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="rentals_table" layoutX="17.0" layoutY="64.0" prefHeight="306.0" prefWidth="855.0">
+               <columns>
+                  <TableColumn fx:id="city_column" prefWidth="92.80002212524414" text="City" />
+                  <TableColumn fx:id="country_column" text="Country" />
+                  <TableColumn fx:id="price_column" minWidth="0.0" prefWidth="90.39997863769531" text="Price / month" />
+                  <TableColumn fx:id="housing_column" prefWidth="94.4000244140625" text="Housing type" />
+                  <TableColumn fx:id="bedrooms_column" prefWidth="78.39996337890625" text="Bedrooms" />
+                  <TableColumn fx:id="surface_column" prefWidth="116.79998779296875" text="Usable surface" />
+                  <TableColumn fx:id="garden_column" prefWidth="122.4000244140625" text="Garden surface" />
+                  <TableColumn fx:id="floors_column" prefWidth="52.00006103515625" text="Floors" />
+                  <TableColumn fx:id="rentalHouseName_column" prefWidth="127.20000000000005" text=" House name" />
+               </columns>
+            </TableView>
+            <AnchorPane fx:id="employee_menu2" layoutY="371.0" prefHeight="96.0" prefWidth="1000.0" style="-fx-background-color: #0D5C71;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="371.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

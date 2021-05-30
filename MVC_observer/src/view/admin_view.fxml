@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="admin_pane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #0D5C71;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CAdmin">
+   <children>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin menu">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="adminCreate_btn" layoutX="220.0" layoutY="46.0" mnemonicParsing="false" onAction="#create_employee" prefHeight="26.0" prefWidth="90.0" text="Create" />
+      <Button fx:id="adminRead_btn" layoutX="335.0" layoutY="46.0" mnemonicParsing="false" onAction="#readEmployee" prefHeight="26.0" prefWidth="90.0" text="Read" />
+      <Button fx:id="adminUpdate_btn" layoutX="450.0" layoutY="46.0" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="26.0" prefWidth="94.0" text="Update" />
+      <Button fx:id="adminDelete_btn" layoutX="569.0" layoutY="46.0" mnemonicParsing="false" onAction="#delete_employee" prefHeight="26.0" prefWidth="90.0" text="Delete" />
+      <Button fx:id="adminSignOut_btn" layoutX="779.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleAdminSignOut" prefHeight="26.0" prefWidth="106.0" text="Sign out" />
+      <TextField fx:id="tf_employee_firstName" layoutX="78.0" layoutY="98.0" prefHeight="26.0" prefWidth="120.0" promptText="First Name" />
+      <TextField fx:id="tf_employee_username" layoutX="380.0" layoutY="98.0" prefHeight="26.0" prefWidth="120.0" promptText="Username" />
+      <TextField fx:id="tf_employee_role" layoutX="683.0" layoutY="98.0" prefHeight="26.0" prefWidth="120.0" promptText="Role" />
+      <TextField fx:id="tf_employee_lastName" layoutX="230.0" layoutY="98.0" prefHeight="26.0" prefWidth="120.0" promptText="Last Name" />
+      <TableView fx:id="employee_table" prefHeight="421.0" prefWidth="811.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="154.0">
+        <columns>
+            <TableColumn fx:id="admin_first_name" prefWidth="171.1999740600586" text="first name" />
+            <TableColumn fx:id="admin_last_name" prefWidth="173.60003662109375" text="last name" />
+            <TableColumn fx:id="admin_username" prefWidth="164.00009155273438" text="username" />
+            <TableColumn fx:id="admin_password" prefWidth="180.79998779296875" text="password" />
+            <TableColumn fx:id="admin_role" prefWidth="119.2000732421875" text="role" />
+        </columns>
+      </TableView>
+      <PasswordField fx:id="tf_employee_password" layoutX="524.0" layoutY="98.0" prefHeight="26.0" prefWidth="126.0" promptText="Password" />
+      <TextField fx:id="notification_textField" layoutX="9.0" layoutY="13.0" prefHeight="26.0" prefWidth="258.0" promptText="Notifications" style="-fx-background-color: #0D5C71;" />
+      <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="544.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ro.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="580.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../en.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="614.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../de.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="650.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../es.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ro_button" blendMode="DARKEN" layoutX="544.0" layoutY="3.0" mnemonicParsing="false" onAction="#romanianLanguage" prefHeight="26.0" prefWidth="26.0" />
+      <Button fx:id="en_button" blendMode="DARKEN" layoutX="579.0" layoutY="3.0" mnemonicParsing="false" onAction="#englishLanguage" prefHeight="26.0" prefWidth="26.0" />
+      <Button fx:id="de_button" blendMode="DARKEN" layoutX="614.0" layoutY="3.0" mnemonicParsing="false" onAction="#germanLanguage" prefHeight="26.0" prefWidth="26.0" />
+      <Button fx:id="es_button" blendMode="DARKEN" layoutX="650.0" layoutY="3.0" mnemonicParsing="false" onAction="#spanishLanguage" prefHeight="26.0" prefWidth="26.0" />
+   </children>
+</AnchorPane>
