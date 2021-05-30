@@ -10,7 +10,10 @@ Project Structure Intellij:
 `mysql-connector-java-8.0.25`
 
 
-Check House-Rental-Management `images` folder to see how GUI looks
+Check House-Rental-Management `images` folder to see how GUI looks like
+This time the app persistence use MySQL instead of XML files. Also I used MVC design pattern coagulated with
+Observer pattern and Proxy pattern for database
+
 
 Login as an admin:
   username `admin`
