@@ -38,7 +38,7 @@
                   <Font size="19.0" />
                </font>
             </Text>
-            <TextField fx:id="notification_textField" layoutX="14.0" layoutY="12.0" prefHeight="26.0" prefWidth="258.0" promptText="Notifications" style="-fx-background-color: #0D5C71;" />
+            <TextField fx:id="notification_textField" layoutX="14.0" layoutY="7.0" prefHeight="26.0" prefWidth="435.0" promptText="Notifications" style="-fx-background-color: #0D5C71;" />
             <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="646.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../ro.png" />

@@ -22,7 +22,7 @@
                </font>
             </Text>
             <Button fx:id="employee_signOut" layoutX="895.0" layoutY="18.0" mnemonicParsing="false" onAction="#employeeSignOut" prefHeight="22.0" prefWidth="90.0" text="Sign out" />
-            <TextField fx:id="notification_textField" layoutX="14.0" layoutY="6.0" prefHeight="26.0" prefWidth="258.0" promptText="Notifications" style="-fx-background-color: #0D5C71;" />
+            <TextField fx:id="notification_textField" layoutX="14.0" layoutY="6.0" prefHeight="26.0" prefWidth="499.0" promptText="Notifications" style="-fx-background-color: #0D5C71;" />
             <ImageView accessibleRole="BUTTON" cache="true" depthTest="DISABLE" fitHeight="26.0" fitWidth="32.0" layoutX="637.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="637.0">
                <image>
                   <Image url="@../ro.png" />

@@ -17,6 +17,8 @@ import model.Subject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class CAdmin implements Initializable, Observer {
@@ -85,7 +87,7 @@ public class CAdmin implements Initializable, Observer {
     CAdmin cAdmin;
 
 
-    private final Employees employees;
+    private Employees employees;
     private Employee employee;
     private Employee employee2;
     private Employees employees2;
@@ -101,7 +103,7 @@ public class CAdmin implements Initializable, Observer {
 
 
 
-         @FXML
+    @FXML
     void romanianLanguage() {
         tf_employee_firstName.setPromptText(firstNameText[0]);
          tf_employee_lastName.setPromptText(lastNameText[0]);
@@ -202,19 +204,6 @@ public class CAdmin implements Initializable, Observer {
     }
 
 
-    public void initializePEmployees() {
-/*        Employee e1 = new Employee("fName_employee1", "lName1_employee1", "user", "pass", "employee");
-        Employee e2 = new Employee("fName_employee2", "lName2_employee2", "emp2", "emp2", "employee");
-        Employee e3 = new Employee("fName_employee3", "lName3_employee3", "emp3", "emp3", "employee");
-        Employee e4 = new Employee("fName_employee4", "lName4_employee4", "admin", "admin", "admin");
-        employees.addEmployee(e1);
-        employees.addEmployee(e2);
-        employees.addEmployee(e3);
-        employees.addEmployee(e4);
-        displayEmployeeTable(this.employees);*/
-    }
-
-
     public void refresh() {
         displayEmployeeTable(this.employees);
     }
@@ -223,11 +212,15 @@ public class CAdmin implements Initializable, Observer {
     public void createEmployee() throws IOException {
         employee = getTextFromTextFields();
         subject.getDatabase().addEmployee(employee);
-/*        saveToXML();
-        loadFromXML();*/
+
         displayEmployeeTable(this.employees);
 
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
 
+        String s = new String("Admin added " + employee.getUsername() + " at " + time);
+        subject.notifyEmployee(s);
     }
 
     public void deleteEmployee() {
@@ -235,16 +228,28 @@ public class CAdmin implements Initializable, Observer {
         subject.getDatabase().deleteEmployee(employee);
         //employees.deleteEmployee(employee);
         displayEmployeeTable(this.employees);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Admin deleted " + employee.getUsername() + " at " + time);
+        subject.notifyEmployee(s);
     }
 
     public void updateEmployee() throws IOException {
         employee = selectEmployee();
         employee2 = getTextFromTextFields();
         subject.getDatabase().updateEmployee(employee, employee2);
-        //employees.updateEmployee(employee, employee2);
+
         displayEmployeeTable(this.employees);
-/*        saveToXML();
-        loadFromXML();*/
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Admin updated " + employee.getUsername() + " at " + time);
+        subject.notifyEmployee(s);
     }
 
     public void readEmployee() {
@@ -257,14 +262,8 @@ public class CAdmin implements Initializable, Observer {
 
     public void init() {
 
-        //cAdmin = new CAdmin();
-        //pAdmin.initializePEmployees();
-
         displayEmployeeTable(this.employees);
         initEmployeeTable();
-
-        //initializePEmployees();
-        //loadFromXML();
 
 
     }

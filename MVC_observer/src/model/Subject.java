@@ -86,8 +86,16 @@ public class Subject {
         return csignIn;
     }
 
-    public void nofifyAdmin(String s) {
+    public void notifyAdmin(String s) {
         getAdminController().updateNotifications(s);
+    }
+
+    public void notifyEmployee(String s) {
+        getEmployeeController().updateNotifications(s);
+    }
+
+    public void notifyClient(String s) {
+        getClientController().updateNotifications(s);
     }
 
 

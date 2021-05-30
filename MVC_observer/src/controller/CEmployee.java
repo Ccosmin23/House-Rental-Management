@@ -21,6 +21,8 @@ import model.report.ReportFactory;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -427,6 +429,10 @@ public class CEmployee implements Initializable, Observer {
         client_housePrice.setText(priceComboText[3]);
     }
 
+    public void updateNotifications(String s) {
+        this.notificationsText += s + "\n";
+        notification_textField.setText(this.notificationsText);
+    }
 
 
     public void setComboItems(){
@@ -613,6 +619,13 @@ public class CEmployee implements Initializable, Observer {
         displayTableRentals(this.rentalHouses);
         setComboItems();
 
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Employee added " + rentalHouse.getHouse_name() + " at " + time);
+        subject.notifyAdmin(s);
+        subject.notifyClient(s);
     }
 
     public void readRental() {
@@ -629,6 +642,13 @@ public class CEmployee implements Initializable, Observer {
         displayTableRentals(this.rentalHouses);
         setComboItems();
 
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Employee updated " + rentalHouse.getHouse_name() + " at " + time);
+        subject.notifyClient(s);
+
     }
 
     public void deleteRentals() {
@@ -637,6 +657,13 @@ public class CEmployee implements Initializable, Observer {
         subject.getDatabase().deleteRental(rentalHouse);
         displayTableRentals(this.rentalHouses);
         setComboItems();
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Employee deleted " + rentalHouse.getHouse_name() + " at " + time);
+        subject.notifyClient(s);
     }
 
     // RENTALS' methods
@@ -823,18 +850,6 @@ public class CEmployee implements Initializable, Observer {
     @FXML
     void handleUpdateRentals(ActionEvent event) throws Exception {
         updateRentals();
-        //pEmployees.refreshTables();
-
-/*        saveToXML();
-        loadFromXML();*/
-
-/*        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/employee_view.fxml"));
-        Stage window = (Stage) updateRental_btn.getScene().getWindow();
-        window.setTitle("Sign In");
-        window.setScene(new Scene(root, 1000, 600));*/
-
-        // pEmployees.refreshTables();
-
     }
 
     public Button rentalsUpdatePressed() {
@@ -875,6 +890,17 @@ public class CEmployee implements Initializable, Observer {
 
 
     /*
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
     *
     *
     *
@@ -937,6 +963,13 @@ public class CEmployee implements Initializable, Observer {
         //clients.addClient(client);
         subject.getDatabase().addClient(client);
         displayClientTable(this.clients);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Employee added " + client.getFirstName() + " at " + time);
+        subject.notifyAdmin(s);
     }
 
     public void readClient() {
@@ -950,6 +983,13 @@ public class CEmployee implements Initializable, Observer {
         //clients.deleteClient(client);
         subject.getDatabase().deleteClient(client);
         displayClientTable(clients);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Employee deleted " + client.getFirstName() + " at " + time);
+        subject.notifyAdmin(s);
     }
 
     public void updateClient() throws IOException {
@@ -957,6 +997,13 @@ public class CEmployee implements Initializable, Observer {
         Client client2 = getTextFromFields();
         subject.getDatabase().updateClient(client, client2);
         displayClientTable(clients);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String time = dtf.format(now);
+
+        String s = new String("Employee updated " + client.getFirstName() + " at " + time);
+        subject.notifyAdmin(s);
     }
 
 

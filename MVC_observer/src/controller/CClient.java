@@ -77,6 +77,8 @@ public class CClient implements Initializable, Observer {
     private Subject subject;
     private Scene clientScene;
     private CSignIn cSignIn;
+    private String notificationsText = new String();
+
 
     public CClient() {
         rentalHouses = new RentalHouses();
@@ -235,7 +237,10 @@ public class CClient implements Initializable, Observer {
     }
 
 
-
+    public void updateNotifications(String s) {
+        this.notificationsText += s + "\n";
+        notification_textField.setText(this.notificationsText);
+    }
 
 
 
